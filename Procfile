@@ -1,1 +1,1 @@
-web: gunicorn gpgc.wsgi --log-file -
+web: gunicorn cms.wsgi --log-file -
