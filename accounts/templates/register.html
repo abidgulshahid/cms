@@ -14,8 +14,10 @@
 			padding: 0;
 			height: 100%;
 			background: #343a3f !important;
+			color: white;
 		}
 		.user_card {
+			color: white;
 			width: 350px;
 			margin-top: auto;
 			margin-bottom: auto;
@@ -67,7 +69,7 @@
 
 </head>
 <body>
-	<div class="container h-100">
+	<div class="container h100">
 		<nav class="navbar navbar-expand-lg navbar-dark "s>
   <a class="navbar-brand" href="#">CMS Registration</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -82,6 +84,8 @@
     </ul>
   </div>
 </nav>
+<br><br><br><br><br><br>
+
 		<div class="d-flex justify-content-center h-100">
 			<div class="user_card">
 				<div class="d-flex justify-content-center">
@@ -128,12 +132,9 @@
 				   		</div>
 					</form>
 				</div>
-				{{form.errors}}
-
-
+				<span style="color: white;">{{form.errors}}</span>
 				<div class="mt-4">
-					<div class="d-flex justify-content-center links">
-						Already have an account? <a href="{% url 'login' %}" class="ml-2">Login</a>
+					<div class="d-flex justify-content-center links"><span style="color: white;">Already have an account? </span> <a href="{% url 'login' %}" class="ml-2">Login</a>
 					</div>
 				</div>
 			</div>

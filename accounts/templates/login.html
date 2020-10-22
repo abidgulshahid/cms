@@ -11,6 +11,7 @@
 	<style>
 		body,
 		html {
+			color: white;
 			margin: 0;
 			padding: 0;
 			height: 100%;
@@ -20,7 +21,7 @@
 			width: 350px;
 			margin-top: auto;
 			margin-bottom: auto;
-			background: #212529;
+			background-color:  #212529;
 			position: relative;
 			display: flex;
 			color:white;
@@ -31,6 +32,7 @@
 			-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 			-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 			border-radius: 5px;
+		
 
 		}
 
@@ -68,16 +70,16 @@
 		}
 
 		#messages{
-			background-color: grey;
-			color: #fff;
+			color:white;
 			padding: 10px;
 			margin-top: 10px;
+
 		}
 	</style>
 
 </head>
 <body>
-	<div class="container-h100">
+	<div class="container h100">
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="#">CMS LOGIN</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -132,12 +134,12 @@
 				</div>
 
 				{% for message in messages %}
-					<p id="messages">{{message}}</p>
+					<span style="color: white;">{{message}}</span>
 				{% endfor %}			
 		
 					<div class="mt-4">
-					<div class="d-flex justify-content-center links">
-						Don't have an account? <a href="{% url 'register' %}" class="ml-2">Sign Up</a>
+					<div class="d-flex justify-content-center links" style="color: white;">
+						<span style="color: white;">Don't have an account?</span> <a href="{% url 'register' %}" class="ml-2">Sign Up</a>
 					</div>
 
 			
