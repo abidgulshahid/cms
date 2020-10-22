@@ -25,7 +25,7 @@ SECRET_KEY = 'i00y^3oa$-92r2n&%n68s2m@rowxuwvj03g6x5cm*xjtxw9^76'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://gpgc.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
