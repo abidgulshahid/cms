@@ -12,7 +12,6 @@ django-cors-headers==3.5.0
 django-downloadview==1.8
 django-ipware==1.1.0
 django-jinja==2.3.0
-django-jinja-bootstrap-form==4.1.2
 django-redis-cache==1.6.0
 django-redis-sessions==0.5.0
 django-utils==0.0.2
