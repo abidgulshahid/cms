@@ -11,4 +11,8 @@ class BSCS(models.Model):
 	subject_teacher = models.CharField(max_length=200,null=True)
 
 	def __str__(self):
-		return self.class_schedule
+		return self.course_work
+
+class students_courses(models.Model):
+	pass
+

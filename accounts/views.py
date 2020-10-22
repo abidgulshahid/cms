@@ -7,7 +7,7 @@ from django.contrib.auth import authenticate
 from django.contrib.auth import logout as auth_logout
 from django.contrib.auth import login as auth_login
 from django.contrib.auth.decorators import login_required
-
+from .models import BSCS
 
 def index(request):
 	return render(request,'index.html')
@@ -51,7 +51,9 @@ def login(request):
 
 @login_required(login_url='login')
 def home(request):
-	return render(request, 'home.html')
+	all_data = BSCS.objects.all()
+	context = {"DATA":all_data}
+	return render(request, 'home.html', context)
 
 
 
