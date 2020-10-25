@@ -87,8 +87,8 @@
     <div class="bg-light border-right" id="sidebar-wrapper">
       <div class="sidebar-heading" >CMS HOME</div>
       <div class="list-group list-group-flush">
-        <a href="#" class="list-group-item list-group-item-action bg-dark" style="color: white;">Dashboard</a>
-        <a href="{% url 'courses' %}" class="list-group-item list-group-item-action bg-light">Courses</a>
+        <a href="{% url 'home' %}" class="list-group-item list-group-item-action bg-light">Dashboard</a>
+        <a href="#" class="list-group-item list-group-item-action bg-dark" style="color: white;">Courses</a>
   <a href="#" class="list-group-item list-group-item-action bg-light">Attendence</a>
          <a href="#" class="list-group-item list-group-item-action bg-light">Result</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
@@ -135,27 +135,35 @@
         <h1 class="mt-4">Hello, {{request.user}}</h1>
 
         <hr>
-    <h2>Announcement</h2>
-        <table class='table table-sm' >
-          <tr> 
-            <th>Date </th>
-            <th>Message </th>
-          </tr>
-
-        {% for ann in announcments %}
-        <tr>
-          <td>{{ann.date}}</td>
-          <td>{{ann.msg}}</td>
-        </tr>
-        {% endfor  %}
-        </table>
+ 
         <hr>
-       
+        <h2>Courses</h2>
+        <table class="table table-sm">
+          <tr>
+            <th>Class Schedule </th>
+            <th>Couse Work</th>
+            <th>Subject Teacher</th>
+            <th>Semester</th>
+          </tr>
+  
+          {% for data  in DATA %}
+            <tr>
+  
+              <td>{{data.class_schedule}}</td>
+              <td>{{data.course_work}}</td>
+              <td>{{data.subject_teacher}}</td>
+              <td>{{data.sem}}</td>
+            </tr>
+          {% endfor %}
+  
+        </table>
+
 
         </h2>
         <hr>
        
         <hr>
+        <h2>Result</h2>
 
       </div>
     </div>
