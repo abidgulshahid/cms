@@ -21,8 +21,11 @@ from django.contrib.auth import views as auth_views
 
 urlpatterns = [
 	path("", include('accounts.urls'), name='index'),
-        path('admin/', admin.site.urls),
+        path('superuser/admin/', admin.site.urls),
     
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 
+admin.sites.AdminSite.site_header = 'CMS'
+admin.sites.AdminSite.site_title = 'College Management System'
+admin.sites.AdminSite.index_title = 'Abid Gull Shahid'

@@ -61,6 +61,19 @@ def courses(request):
 	context = {"DATA":all_data}
 	return render(request,'courses.html',context)
 
+
+def admin_login(request):
+	pass
+
+def admin_homepage(request):
+	pass
+
+def admin_logout(request):
+	pass
+
+
+
+
 def logOut(request):
 	auth_logout(request)
 	return redirect('login')
