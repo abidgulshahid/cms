@@ -5,11 +5,6 @@ from django.contrib.auth.models import User
 from .models import CustomUser
 
 
-# class createuserform(UserCreationForm):
-# 	class Meta:
-# 		model = User
-# 		print (dir(model))
-# 		fields = ['first_name','username','email','date_joined']
 
 class CustomUserCreationForm(UserCreationForm):
 	class Meta:
