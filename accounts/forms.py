@@ -15,7 +15,7 @@ class CustomUserCreationForm(UserCreationForm):
 	class Meta:
 		model = CustomUser
 		print (dir(model))
-		fields = ('user_id','first_name','username','email','password')
+		fields = ('first_name','username','email','password')
 class CustomUserChangeForm(UserChangeForm):
 	class Meta:
 		model = CustomUser
