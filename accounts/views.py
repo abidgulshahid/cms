@@ -1,21 +1,21 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.http import HttpResponseRedirect
-from .forms import createuserform
+from .forms import CustomUserCreationForm
 from django.contrib import messages
 from django.contrib.auth import authenticate
 from django.contrib.auth import logout as auth_logout
 from django.contrib.auth import login as auth_login
 from django.contrib.auth.decorators import login_required
-from .models import BSCS,announcments
+from .models import *
 def index(request):
 	return render(request,'index.html')
 
 
 def register(request):
-    form =  createuserform()
+    form =  CustomUserCreationForm()
     if request.method == 'POST':
-    	form = createuserform(request.POST)
+    	form = CustomUserCreationForm(request.POST)
     	if form.is_valid():
     		form.save()
     		username = form.cleaned_data.get('username')
@@ -50,14 +50,14 @@ def login(request):
 
 @login_required(login_url='login')
 def home(request):
-    all_data = BSCS.objects.all()
+    all_data = BS.objects.all()
     announce = announcments.objects.all()
     context = {"DATA":all_data,"announcments":announce}
     return render(request, 'home.html', context)
 
 @login_required(login_url='login')
 def courses(request):
-	all_data = BSCS.objects.all()
+	all_data = BS.objects.all()
 	context = {"DATA":all_data}
 	return render(request,'courses.html',context)
 
