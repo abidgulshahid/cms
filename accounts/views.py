@@ -9,7 +9,10 @@ from django.contrib.auth import login as auth_login
 from django.contrib.auth.decorators import login_required
 from .models import *
 def index(request):
-	return render(request,'index.html')
+	announce = announcments.objects.all()
+	context = {"announcments":announce}
+	return render(request,'index.html',context)
+
 
 
 def register(request):
